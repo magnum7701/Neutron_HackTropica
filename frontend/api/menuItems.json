@@ -1,0 +1,20 @@
+[
+    {
+        "icon":"/icons/dashboard-square-03.svg",
+        "name":"Dashboard"
+    },
+    {
+        "icon":"/icons/note-05.svg",
+        "name":"Notes"
+    },{
+        "icon":"/icons/assignments.svg",
+        "name":"Assignments"
+    },{
+        "icon":"/icons/user.svg",
+        "name":"Accounts"
+    },
+    {
+        "icon":"/icons/settings-01.svg",
+        "name":"Settings"
+    }
+]
