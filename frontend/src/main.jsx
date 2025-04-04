@@ -12,6 +12,11 @@ import AssignMentPage from './AssignMentPage.jsx';
 import AccountPage from './AccountPage.jsx';
 import SettingsPage from './SettingsPage.jsx';
 import { NewNotePage } from './NewNotePage.jsx';
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(import.meta.env.VITE_API_URL, import.meta.env.VITE_ANON_KEY);
+export { supabase };
+
 
 const router = createBrowserRouter([
   {
