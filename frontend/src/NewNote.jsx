@@ -1,5 +1,5 @@
-import { Chatbot } from "./Chatbot"
-import { DrawingTools } from "./DrawingTools"
+import { Chatbot } from "../components/Chatbot"
+import { DrawingTools } from "../components/DrawingTools"
 import "../styles/NewNote.scss";
 
 export const NewNote = () =>{
