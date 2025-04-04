@@ -19,7 +19,7 @@ export const DashboardLayout = () => {
 				<div className="menu-items">
 					{menuItems.map((item, index) => {
 						return (
-							<Link to={item.name === "Dashboard" ? "/dashboard" : `/dashboard/${item.name}`} key={index}
+							<Link to={item.name === "Dashboard" ? "/dashboard" : `/dashboard/${item.name.toLocaleLowerCase()}`} key={index}
 								onClick={() => setCurrentSelection(index)}
 								onMouseEnter={() => setHoverState(index)}
 								onMouseLeave={() => setHoverState(null)}

@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createBrowserRouter, RouterProvider, useParams } from 'react-router';
 import { ErrorPage } from './ErrorPage.jsx';
 import { LoginPage } from './LoginPage.jsx';
 import { HomePage } from './HomePage.jsx';
@@ -11,7 +11,7 @@ import NotesPage from './NotesPage.jsx';
 import AssignMentPage from './AssignMentPage.jsx';
 import AccountPage from './AccountPage.jsx';
 import SettingsPage from './SettingsPage.jsx';
-import { NewNote } from './NewNote.jsx';
+import { NewNotePage } from './NewNotePage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,10 +24,6 @@ const router = createBrowserRouter([
     element: <LoginPage />
   },
   {
-    path: "/newnote",
-    element: <NewNote />
-  },
-  {
     path: "/dashboard",
     element: <DashboardLayout />,
     children: [
@@ -37,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "notes",
-        element: <NotesPage />
+        element: <NotesPage />,
       },
       {
         path: "assignments",
@@ -52,7 +48,11 @@ const router = createBrowserRouter([
         element: <SettingsPage />
       },
     ]
-  }
+  },
+  {
+    path: "dashboard/notes/:newnote",
+    element: <NewNotePage />
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(
