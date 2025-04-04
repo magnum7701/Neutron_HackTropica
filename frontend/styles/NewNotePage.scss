@@ -1,0 +1,34 @@
+.react-mde {
+    margin-right: 20px;
+    height: 100%;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+
+
+    .mde-textarea-wrapper {
+        // height: max-content;
+        border-style: none;
+        // border-top-right-radius: 15px !important;
+    }
+    .mde-header{
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    .mde-tabs{
+        
+        button{
+            margin-left: 5px;
+            border-radius: 5px;
+            padding: 7px;
+        }
+    }
+
+    .mde-text {
+        height: 77vh !important;
+        resize: none;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+        color: whitesmoke;
+
+    }
+}

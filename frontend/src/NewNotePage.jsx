@@ -6,7 +6,7 @@ import ReactMde from "react-mde";
 import * as Showdown from "showdown";
 import { useState } from "react";
 import "react-mde/lib/styles/css/react-mde-all.css";
-
+import "../styles/NewNotePage.scss"
 
 export const NewNotePage = () => {
     const converter = new Showdown.Converter({
@@ -33,7 +33,7 @@ export const NewNotePage = () => {
                             <button className="transcribe">Transcribe</button>
                             <button className="up-pdf">+ Upload PDF</button>
                         </div>
-                        <ReactMde
+                        <ReactMde 
                             value={value}
                             onChange={setValue}
                             selectedTab={selectedTab}
@@ -43,7 +43,7 @@ export const NewNotePage = () => {
                             }
                         />
 
-                        <p>Hi</p>
+                        
                     </div>
                     <Chatbot />
                 </div>
