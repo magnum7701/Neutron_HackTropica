@@ -1,0 +1,7 @@
+youtube-transcript-api
+flask
+flask_cors
+dotenv
+google.generativeai
+byaldi
+pdf2image
