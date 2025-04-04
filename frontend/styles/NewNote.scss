@@ -1,0 +1,46 @@
+.tools-text {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    justify-content: space-between;
+    
+
+    
+    .content{
+        // background-color: antiquewhite;
+        width: 100%;
+        padding-left: 4vh;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+
+        input, button{
+            // outline: none;
+            border: 0;
+        }
+        
+    }
+
+    .driver{
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        gap: 4vh;
+        height: 40px;
+    }
+
+    .url-box{
+        border-radius: 8px;
+        padding-left: 1vw;
+        // outline: none;
+    }
+
+    .yt-url {
+        width: 30vw;
+        // height: 400px;
+    }
+
+    .transcribe, .up-pdf{
+        padding: 0 2vh;
+    }
+}

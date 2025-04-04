@@ -1,0 +1,43 @@
+.chatbot-section{
+    width: 30vw;
+    background-color: #1a1a1a;
+    height: 100vh;
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    p{
+        padding: 8vh;
+    }
+
+    .send{
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+        padding-top: 12vh;
+    }
+
+    input{
+        width: 32vh;
+        height: 4vh;
+        border-radius: 8px;
+        padding-left: 2vw;
+    }
+
+    button{
+        height: 4vh;
+        width: 4vh;
+        border-radius: 8px;
+        background-color: #0090f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: aliceblue;
+    }
+}

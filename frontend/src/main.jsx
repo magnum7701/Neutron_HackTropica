@@ -11,6 +11,7 @@ import NotesPage from './NotesPage.jsx';
 import AssignMentPage from './AssignMentPage.jsx';
 import AccountPage from './AccountPage.jsx';
 import SettingsPage from './SettingsPage.jsx';
+import { NewNote } from './NewNote.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginPage />
+  },
+  {
+    path: "/newnote",
+    element: <NewNote />
   },
   {
     path: "/dashboard",
