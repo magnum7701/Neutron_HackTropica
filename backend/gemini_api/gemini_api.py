@@ -1,6 +1,10 @@
 import os
 import google.generativeai as genai
 from dotenv import load_dotenv
+import base64
+from io import BytesIO
+from PIL import Image  # Optional, for additional image handling
+
 
 load_dotenv()
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
