@@ -33,3 +33,8 @@ def get_summary(transcript, tips=""):
     prompt=f'''Can you pleaste summarize this Transcript: {transcript}. {tips}'''
     response = chat_session.send_message(prompt)
     return response.text
+  
+def get_ans_from_pdf(contents):
+    response = model.generate_content(contents)
+    print(response.text)
+    

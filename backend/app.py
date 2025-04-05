@@ -38,4 +38,24 @@ def upload_pdf():
     if not os.path.exists(UPLOAD_FOLDER):
         os.makedirs(UPLOAD_FOLDER)
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    #dump pdf files in folder
+    pdf_files = request.files.getlist('pdf_files')
+    for pdf_file in pdf_files:
+        pdf_file.save(os.path.join(app.config['UPLOAD_FOLDER'], pdf_file.filename))
+    #index pdf files
+    pdf_ops.index_pdfs('UPLOAD_FOLDER')
+    return 'PDFs uploaded and indexed successfully', 200
+
+@app.route('/answer-questions', methods=['POST'])
+def answer_questions():
+    data = request.get_json()
+    query = data.get('query')
+    if not query:
+        return jsonify({"error": "No query provided"}), 400
+    else:
+        contents = pdf_ops.retrieve_contents(query)
+        response = gemini_api.get_ans_from_pdf(contents)
+        return jsonify({"response": response}), 200
+
+
 app.run(debug=True, port=8000)
