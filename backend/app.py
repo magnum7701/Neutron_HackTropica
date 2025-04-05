@@ -1,7 +1,9 @@
+import os
 from flask import Flask,request, jsonify
 from yt_transcript import yt_ts
 from gemini_api import gemini_api
 from flask_cors import CORS
+from pdf_handling import pdf_ops
 app = Flask(__name__)
 CORS(app)
 
@@ -29,5 +31,11 @@ def summarize_video():
             else:
                 print(summary)
                 return jsonify({"summary": summary}), 200
-
+            
+@app.route('/upload_pdf')
+def upload_pdf():
+    UPLOAD_FOLDER = 'uploaded_pdfs'
+    if not os.path.exists(UPLOAD_FOLDER):
+        os.makedirs(UPLOAD_FOLDER)
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.run(debug=True, port=8000)
