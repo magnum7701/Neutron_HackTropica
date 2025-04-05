@@ -33,6 +33,7 @@ export const NewNotePage = () => {
                             <button className="transcribe">Transcribe</button>
                             <button className="up-pdf">+ Upload PDF</button>
                         </div>
+                        <input type="text" placeholder="Enter Title" className="title-box" />
                         <ReactMde 
                             value={value}
                             onChange={setValue}

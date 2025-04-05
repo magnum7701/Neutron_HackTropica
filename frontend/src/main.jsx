@@ -58,6 +58,10 @@ const router = createBrowserRouter([
     path: "dashboard/notes/:newnote",
     element: <NewNotePage />
   },
+  {
+    path: "dashboard/notes/newnote",
+    element: <NewNotePage />
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(
